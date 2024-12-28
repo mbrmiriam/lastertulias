@@ -1,9 +1,11 @@
 import { NextResponse } from "next/server";
 
-export const dynamic = "force-dynamic";
+export const runtime = 'edge';
 
 export async function GET() {
-    return NextResponse.json({
-      key: process.env.DEEPGRAM_API_KEY ?? "",
-    });
+  if (!process.env.DEEPGRAM_API_KEY) {
+    return new NextResponse('Deepgram API key not found', { status: 500 });
+  }
+
+  return NextResponse.json({ apiKey: process.env.DEEPGRAM_API_KEY });
 }
