@@ -1,0 +1,1 @@
+Vas a hacer una web para vender entradas de un evento de debate para jóvenes en Santander. La web tiene que ser simple, pero estará conectada al checkout de Stripe. Pon especial atención a que la web sea responsive y que se vea bien en móvil.
